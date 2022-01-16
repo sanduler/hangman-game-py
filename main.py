@@ -24,3 +24,8 @@ guess = letter.lower()
 # print(guess)
 
 # Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
+for lett in chosen_word:
+    if lett == guess:
+        print("Right!")
+    else:
+        print("Wrong!")
