@@ -12,12 +12,21 @@ word_list = ["aardvark", "baboon", "camel", "yummy", "zigzagging",
 chosen_word = random.choice(word_list)
 
 # check if the random word was chosen
-# print(chosen_word)
+print(chosen_word)
+
 
 # 1: - Create an empty List called display.
 # For each letter in the chosen_word, add a "_" to 'display'.
 # So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
 
+display = []
+
+size = len(chosen_word)
+
+for length in range(size):
+    display.append("_")
+
+print(display)
 
 # Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
 guess = input("Guess a letter: ").lower()
