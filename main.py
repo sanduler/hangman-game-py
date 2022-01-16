@@ -15,5 +15,12 @@ chosen_word = random.choice(word_list)
 # print(chosen_word)
 
 # Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+letter = input("Guess a letter: ")
+
+# set the letter to lowercase
+guess = letter.lower()
+
+# check if the letter is lower case
+# print(guess)
 
 # Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
