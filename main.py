@@ -4,16 +4,79 @@
 # user the random libary to be able to randomly select a word
 import random
 
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 
 word_list = ["aardvark", "baboon", "camel", "yummy", "zigzagging",
              "wristwatch", "razzmatazz", "kilobyte", "stronghold"]
+
+# boolian to continue the game
+game_continue = True
+
+# Create a variable called 'lives' to keep track of the number of lives left and set 'lives' to equal 6.
+lives = 6
 
 # Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 chosen_word = random.choice(word_list)
 
 
 # check if the random word was chosen
-print(chosen_word)
+print(f"The solution is {chosen_word}")
 
 
 # For each letter in the chosen_word, add a "_" to 'display'.
@@ -30,8 +93,8 @@ print(display)
 # Use a while loop to let the user guess again.
 # The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_").
 # Then you can tell the user they've won.
-counter = 0
-while True:
+
+while game_continue:
     # Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
     guess = input("Guess a letter: ").lower()
 
@@ -44,11 +107,19 @@ while True:
         letter = chosen_word[possition]
         if letter == guess:
             display[possition] = letter
-            counter += 1
+
+    if guess not in chosen_word:
+        lives -= 1
+    # If guess is not a letter in the chosen_word,
+    # Then reduce 'lives' by 1.
+    # If lives goes down to 0 then the game should stop and it should print "You lose."
+
+    # Join all the elements in the list and turn it into a String.
+    print(f"{' '.join(display)}")
 
     # Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
     print(display)
-
+    print(stages[lives])
     # check if placekeeper underscore is in the list, if not break the while loop
-    if '_' not in display:
+    if '_' not in display or lives == 0:
         break
