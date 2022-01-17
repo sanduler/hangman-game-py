@@ -42,10 +42,6 @@
     <br />
     <br />
     <a href="https://github.com/sanduler/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/sanduler/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/sanduler/repo_name/issues">Request Feature</a>
   </p>
 </div>
 
@@ -84,7 +80,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="center">(<a href="#top">back to top</a>)</p>
 
 
 
