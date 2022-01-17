@@ -1,9 +1,3 @@
-
-# Hangman Game
-
-Hangman is a simple paper and pencil guessing game. The player takes turns to guess a letter from the selected word. This program uses OOP to import a dictionary.py file to randomly select a word to which the user tries to guess correctly.
-
-
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -39,10 +33,10 @@ Hangman is a simple paper and pencil guessing game. The player takes turns to gu
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Hangman Game</h3>
 
   <p align="center">
-    project_description
+    Hangman is a simple paper and pencil guessing game. The player takes turns to guess a letter from the selected word. This program uses OOP to import a dictionary.py file to randomly select a word to which the user tries to guess correctly.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
