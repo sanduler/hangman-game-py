@@ -1,69 +1,11 @@
 # Name: Ruben Sanduleac
 # Date: January 16th, 2022
+# Description:
 
 # user the random libary to be able to randomly select a word
 import random
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
-
-
-word_list = ["aardvark", "baboon", "camel", "yummy", "zigzagging",
-             "wristwatch", "razzmatazz", "kilobyte", "stronghold"]
+import hangman_ui
+import dictionary
 
 # boolian to continue the game
 game_continue = True
@@ -71,8 +13,8 @@ game_continue = True
 # Create a variable called 'lives' to keep track of the number of lives left and set 'lives' to equal 6.
 lives = 6
 
-# Randomly choose a word from the word_list and assign it to a variable called chosen_word.
-chosen_word = random.choice(word_list)
+# Randomly choose a word from the word_list function from the dictionary.py
+chosen_word = random.choice(dictionary.word_list)
 
 
 # check if the random word was chosen
