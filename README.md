@@ -124,7 +124,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Pictures of the game in actions are shown:
+<p align="right"><a>Pictures of the game in actions are shown:</a></p>
 <a href="https://github.com/sanduler/hangman-game-py">
     <img src="images/game.png" alt="Pictures">
   </a>
