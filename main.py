@@ -38,7 +38,8 @@ for length in range(size):
 while game_continue:
     # Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
     guess = input("Guess a letter: ").lower()
-
+    while guess in chosen_word:
+        guess = input("Guess a letter: ").lower()
     # check if the letter is lower case
     # print(guess)
 
@@ -51,6 +52,9 @@ while game_continue:
 
     if guess not in chosen_word:
         lives -= 1
+        if lives == 0:
+            game_continue = False
+            print("You lose.")
     # If guess is not a letter in the chosen_word,
     # Then reduce 'lives' by 1.
     # If lives goes down to 0 then the game should stop and it should print "You lose."
@@ -61,5 +65,6 @@ while game_continue:
     # Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
     print(hangman_ui.stages[lives])
     # check if placekeeper underscore is in the list, if not break the while loop
-    if '_' not in display or lives == 0:
-        break
+    if '_' not in display:
+        game_continue = False
+        print("You win!")
