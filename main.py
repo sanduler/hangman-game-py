@@ -7,6 +7,8 @@ import random
 import hangman_ui
 import dictionary
 
+print(hangman_ui.logo)
+print("\n")
 # boolian to continue the game
 game_continue = True
 
@@ -20,22 +22,19 @@ chosen_word = random.choice(dictionary.word_list)
 # check if the random word was chosen
 print(f"The solution is {chosen_word}")
 
-
-# For each letter in the chosen_word, add a "_" to 'display'.
-# So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
-
+# if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
 display = []
 
+# get tge size of the word
 size = len(chosen_word)
 
+# create placeholders based on the size of the word
 for length in range(size):
     display.append("_")
 
-# print(display)
 # Use a while loop to let the user guess again.
 # The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_").
 # Then you can tell the user they've won.
-
 while game_continue:
     # Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
     guess = input("Guess a letter: ").lower()
@@ -60,7 +59,7 @@ while game_continue:
     print(f"{' '.join(display)}")
 
     # Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
-    print(stages[lives])
+    print(hangman_ui.stages[lives])
     # check if placekeeper underscore is in the list, if not break the while loop
     if '_' not in display or lives == 0:
         break
