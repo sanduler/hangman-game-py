@@ -89,7 +89,7 @@ size = len(chosen_word)
 for length in range(size):
     display.append("_")
 
-print(display)
+# print(display)
 # Use a while loop to let the user guess again.
 # The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_").
 # Then you can tell the user they've won.
@@ -118,7 +118,6 @@ while game_continue:
     print(f"{' '.join(display)}")
 
     # Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
-    print(display)
     print(stages[lives])
     # check if placekeeper underscore is in the list, if not break the while loop
     if '_' not in display or lives == 0:
