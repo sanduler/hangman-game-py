@@ -80,7 +80,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-<p align="center">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -124,7 +124,10 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Pictures of the game in actions are shown:
+<a href="https://github.com/sanduler/hangman-game-py">
+    <img src="images/game.png" alt="Pictures">
+  </a>
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
